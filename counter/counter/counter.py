@@ -13,7 +13,8 @@ class State(rx.State):
 
 
 def index():
-    return rx.vstack(
+    return rx.hstack(
+
         rx.button(
             "Decrement",
             color_scheme="red",
