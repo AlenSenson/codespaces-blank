@@ -7,13 +7,7 @@ class State(rx.State):
     pass
 
 def about():
-    return rx.hstack(
-        rx.input(
-            placeholder='Ask a question',
-            style=style.input_style,
-        ),
-        rx.button('Ask',style=style.button_style,),
-    )
+    return rx.text("about page")
 
 def qa(question,answer):
     return rx.box(
