@@ -6,6 +6,9 @@ class State(rx.State):
 
     pass
 
+def about():
+    return rx.text("about page")
+
 def qa(question,answer):
     return rx.box(
         rx.box(
@@ -73,5 +76,6 @@ def index() -> rx.Component:
 
 # Add state and page to the app.
 app = rx.App()
-app.add_page(index)
+app.add_page(index,route="/")
+app.add_page(about,route="/about")
 app.compile()
