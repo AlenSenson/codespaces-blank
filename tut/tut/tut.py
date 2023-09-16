@@ -1,10 +1,15 @@
+
 import reflex as rx
 
 from tut import style
 
-class State(rx.State):
+style123 = {
+    "font_family": "Comic Sans MS",
+    "font_size": "16px",
+    "background_image" : "linear-gradient(90deg, #EE756A 0.75%, #756AEE 88.52%)",
+}
 
-    pass
+
 
 def about():
     return rx.hstack(
@@ -81,7 +86,7 @@ def index() -> rx.Component:
 
 
 # Add state and page to the app.
-app = rx.App()
+app = rx.App(style = style123)
 app.add_page(index,route="/")
 app.add_page(about,route="/about")
 app.compile()
